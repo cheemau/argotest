@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: {{ include "nginx.fullname" . }}
   annotations: 
-    jpmorgan.io/reconciliation-ignores-replica-count: "true"
-    jpmorgan.io/reconciliation-ignores-container-resources: "true"
+    jpmorgan.io/reconciliation-ignores-replica-count: "false"
+    jpmorgan.io/reconciliation-ignores-container-resources: "false"
   labels:
     {{- include "nginx.labels" . | nindent 4 }}
 spec:
